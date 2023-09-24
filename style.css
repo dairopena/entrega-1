@@ -114,10 +114,16 @@ menu {
 
 .content h1 {
     font-size: 70px;
-    color: #2ECC71;
-    font-family:Website;
+    color: #F6DDCC ;
+    font-family:Poppins;
     text-transform: uppercase;
 
+}
+.content h2{
+    font-size: 70px;
+    color: #161618;
+    font-family:website;
+    text-transform: uppercase;
 }
 
 .content p{
@@ -144,6 +150,11 @@ menu {
 
 .service img{
     margin-bottom: 60px;
+}
+
+.service img:hover{
+    transform: scale(2.2);
+    transition: all 0.3s ease;
 }
 
 .service h3{
