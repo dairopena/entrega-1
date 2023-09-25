@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* Fuente de Google Fonts */
+ 
 *{
-    margin:0;
+    margin:0; /* Margen de la página */
     padding:0;
     box-sizing: border-box;
     text-transform: capitalize;
@@ -10,11 +10,11 @@
 }
 
 body{
-    background-color: #1a1a1aec;
+    background-color: #1a1a1aec; /* Color de fondo de la página */
 }
 
 p {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /* Color del texto de los párrafos */
     justify-content: center;
     font-family: 'poppins';
     font-size: 16px;
@@ -22,51 +22,51 @@ p {
 }
 
 @font-face{
-    font-family:Website;
+    font-family:Website;  /* Nombre de la fuente */
     src: url(Fuentes/Website.otf);
 }
 
 h1{
-    font-family:Website;
-    font-size: 70px;
+    font-family:Website;  /* Nombre de la fuente */
+    font-size: 70px;  /* Tamaño de la fuente */
     color: #111111 ;
-    text-align: center;
+    text-align: center; /* Alineación del texto */
     margin-top: 20px;
 }
 
 td{
-    padding-top: 30px;
+    padding-top: 30px; /* Espacio entre el borde superior de la celda y el contenido */
 }
 
 .Reloj {
-    background: rgba(255, 255, 255, 0.733);
-    padding: 10px 0;
-    width: 20%;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    margin-left: 60%;
-    margin-top: -20%;
+    background: rgba(255, 255, 255, 0.733); /* Color de fondo del reloj */
+    padding: 10px 0;  /* Espacio entre el borde superior e inferior del reloj y el contenido */
+    width: 20%;  /* Ancho del reloj */
+    position: absolute;  /* Posición del reloj */
+    border-radius: 10px; /* Borde del reloj */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra del reloj */
+    margin-left: 60%; /* Margen izquierdo del reloj */
+    margin-top: -20%; /* Margen superior del reloj */
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.733);
-    padding: 10px 0;
-    width: 70%;
-    z-index: 999;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.733); /* Color de fondo de la barra de navegación */
+    padding: 10px 0; /* Espacio entre el borde superior e inferior de la barra de navegación y el contenido */
+    width: 70%; /* Ancho de la barra de navegación */
+    z-index: 999; /* Posición de la barra de navegación */
+    height: 80px; /* Altura de la barra de navegación */
+    display: flex;      
+    align-items: center; 
+    justify-content: space-between; 
     margin-left: 15%;
-    position: absolute;
-    border-radius: 10px;
+    position: absolute; /* Posición de la barra de navegación */
+    border-radius: 10px;  
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     top: 70%;
 }
 
 .navbar ul {
-    list-style: none;
+    list-style: none; /* Lista de elementos de la barra de navegación */
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -75,9 +75,9 @@ td{
     margin: 10%;
 }
 
-.navbar li {
-    margin-right: 20px;
-    margin-left: 10px;
+.navbar li { /* Elementos de la barra de navegación */
+    margin-right: 20px; /* Margen derecho de los elementos de la barra de navegación */
+    margin-left: 10px; /* Margen izquierdo de los elementos de la barra de navegación */
 }
 
 .navbar li:last-child {
@@ -101,20 +101,20 @@ td{
     font-weight: 600;
 }
 
-.navbar .Slogan {
+.navbar .Slogan { /* Elemento del eslogan */
     flex-grow: 1;
-    margin-left: 5%;
+    margin-left: 5%; /* Margen izquierdo del eslogan */
 }
 
-.navbar .Slogan p {
+.navbar .Slogan p { /* Texto del eslogan */
     color: #000000;
     font-size: 16px;
     font-weight: 600;
-    font-family: 'poppins';
+    font-family: 'poppins'; /* Fuente del eslogan */
 }
 
 .Contenido {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); /* Color de fondo del contenido */
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -124,7 +124,7 @@ td{
     padding-top: 20px;
 }
 
-.Imagen_landing {
+.Imagen_landing { /* Imagen de la landing page */
     margin-top: 20px;
     margin-left: 10%;
     width: 80%;
@@ -133,25 +133,25 @@ td{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 }
 
-.Imagen_landing:hover {
+.Imagen_landing:hover { /* Imagen de la landing page al pasar el ratón por encima */
     opacity: 0.8;
     transition: all 0.3s ease 0s;
     
 }
 
-.Footer {
+.Footer { /* Pie de página */
     margin-top: 20px;
     text-align: center;
     position: absolute;
     width: 100%;
-    font-family: 'poppins';
+    font-family: 'poppins'; /* Fuente del pie de página */
     color: #ffffff;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Color de fondo del pie de página */
   }
 
-table {
+table { /* Tabla */
     vertical-align: top;
-    justify-content: center;
+    justify-content: center; 
     margin: 20px;
     text-align: center;
   }
@@ -174,7 +174,7 @@ table img {
     height: 350px;
 }
 
-table img:hover {
+table img:hover { /* Imagen de la tabla al pasar el ratón por encima */
     transform: scale(1);
     transition: 0.5s;
     width: 450px;
@@ -182,12 +182,12 @@ table img:hover {
     opacity: 0.5; 
 }
 
-.Hitos {
+.Hitos { /* Lista de hitos */
     margin-top: 20px;
     text-align: center;
     list-style: none;
   }
 
-.Hitos li {
+.Hitos li { /* Elementos de la lista de hitos */
     margin-top: 5px;
 }
