@@ -1,42 +1,67 @@
+/* Importación de fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); /* Fuente de Google Fonts */
- 
+
+/* Estilos globales */
 *{
     margin:0; /* Margen de la página */
-    padding:0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-family: 'poppins', sans-serif;;
+    padding:0; /* Relleno de la página */
+    box-sizing: border-box; /* Modelo de caja */
+    text-transform: capitalize; /* Transformación de texto a mayúsculas */
+    text-decoration: none; /* Decoración de texto */
+    font-family: var(--main-font); /* Familia de fuente principal */
 }
+
+
+/* Este es un comentario */
+/* Variables */
+:root {
+    --main-font: 'poppins', sans-serif; /* Variable de fuente principal */
+    --main-color: #000000; /* Variable de color principal */
+    --background-color: rgba(255, 255, 255, 0.733); /* Variable de color de fondo */
+    --box-shadow-color: rgba(31, 38, 135, 0.37); /* Variable de color de sombra */
+    --box-shadow-hover-color: rgba(31, 38, 135, 0.589); /* Variable de color de sombra al pasar el cursor */
+    --border-color: rgba(26, 26, 26, 0.61); /* Variable de color de borde */
+    --gap-hamburger: 5px; /* Variable de espacio entre barras de hamburguesa */
+    --bar-width: 40px; /* Variable de ancho de barras de hamburguesa */
+    --bar-height: 6px; /* Variable de altura de barras de hamburguesa */
+    --transition: 0.2s ease-in-out; /* Variable de transición */
+    --hamburgesa-height: calc(var(--bar-height) * 3 + var(--gap-hamburger) * 2); /* Variable de altura de hamburguesa, se calcula con las variables de altura y espacio entre barras */
+}
+
+
+/* Estilos del cuerpo de la página */
 
 body{
     background-color: #1a1a1aec; /* Color de fondo de la página */
 }
 
+/* Estilos de los párrafos */
+
 p {
-    color: rgb(0, 0, 0); /* Color del texto de los párrafos */
-    justify-content: center;
-    font-family: 'poppins';
-    font-size: 16px;
-    text-align: justify;
+    color: var(--main-color); /* Color del texto */
+    justify-content: center; /* Centrar el contenido */
+    font-family: var(--main-font); /* Fuente del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-align: justify; /* Alineación del texto */
 }
 
-@font-face{
-    font-family:Website;  /* Nombre de la fuente */
-    src: url(Fuentes/Website.otf);
-}
+/* Estilos de los títulos */
 
 h1{
     font-family:Website;  /* Nombre de la fuente */
     font-size: 70px;  /* Tamaño de la fuente */
-    color: #111111 ;
+    color: #111111 ; /* Color del texto */
     text-align: center; /* Alineación del texto */
-    margin-top: 20px;
+    margin-top: 20px; /* Margen superior del texto */
 }
+
+/* Estilos de  las tablas */
 
 td{
     padding-top: 30px; /* Espacio entre el borde superior de la celda y el contenido */
 }
+
+/* Estilos del reloj */
 
 .Reloj {
     background: rgba(255, 255, 255, 0.733); /* Color de fondo del reloj */
@@ -49,145 +74,423 @@ td{
     margin-top: -20%; /* Margen superior del reloj */
 }
 
+/* Estilos de la barra de navegación */
+
 .navbar {
     background: rgba(255, 255, 255, 0.733); /* Color de fondo de la barra de navegación */
     padding: 10px 0; /* Espacio entre el borde superior e inferior de la barra de navegación y el contenido */
     width: 70%; /* Ancho de la barra de navegación */
     z-index: 999; /* Posición de la barra de navegación */
     height: 80px; /* Altura de la barra de navegación */
-    display: flex;      
-    align-items: center; 
-    justify-content: space-between; 
-    margin-left: 15%;
+    display: flex; /* Mostrar la barra de navegación */
+    align-items: center; /* Alinear los elementos de la barra de navegación */
+    justify-content: space-between; /* Justificar los elementos de la barra de navegación */
+    margin-left: 15%; /* Margen izquierdo de la barra de navegación */
     position: absolute; /* Posición de la barra de navegación */
-    border-radius: 10px;  
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    top: 70%;
+    border-radius: 10px; /* Borde de la barra de navegación */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra de la barra de navegación */
+    top: 70%; /* Posición de la barra de navegación */
 }
+
+/* Estilos de los elementos de la barra de navegación */
 
 .navbar ul {
     list-style: none; /* Lista de elementos de la barra de navegación */
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 10%;
+    padding: 0; /* Relleno de la lista de elementos de la barra de navegación */
+    display: flex; /* Mostrar la lista de elementos de la barra de navegación */
+    flex-direction: row; /* Dirección de la lista de elementos de la barra de navegación */
+    align-items: center; /* Alinear los elementos de la lista de elementos de la barra de navegación */
+    justify-content: center; /* Justificar los elementos de la lista de elementos de la barra de navegación */
+    margin: 10%; /* Margen de la lista de elementos de la barra de navegación */
 }
+
+/* Estilos de los elementos de la barra de navegación */
 
 .navbar li { /* Elementos de la barra de navegación */
     margin-right: 20px; /* Margen derecho de los elementos de la barra de navegación */
     margin-left: 10px; /* Margen izquierdo de los elementos de la barra de navegación */
 }
+ /* Elemento hijo de la barra de navegación */
 
 .navbar li:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Margen derecho del último elemento de la barra de navegación */
 }
 
+/* Estilos de los elementos de la barra de navegación al pasar el ratón por encima */
 .navbar li:hover {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.589);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba(26, 26, 26, 0.61);
-    padding: 5px;
-    transition: all 0.3s ease 0s;
+    background: rgba( 255, 255, 255, 0.25 ); /* Color de fondo de los elementos de la barra de navegación al pasar el ratón por encima */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.589); /* Sombra de los elementos de la barra de navegación al pasar el ratón por encima */
+    backdrop-filter: blur( 4px ); /* Filtro de los elementos de la barra de navegación al pasar el ratón por encima */
+    -webkit-backdrop-filter: blur( 4px ); /* Filtro de los elementos de la barra de navegación al pasar el ratón por encima */
+    border-radius: 10px; /* Borde de los elementos de la barra de navegación al pasar el ratón por encima */
+    border: 1px solid rgba(26, 26, 26, 0.61); /* Borde de los elementos de la barra de navegación al pasar el ratón por encima */
+    padding: 5px; /* Relleno de los elementos de la barra de navegación al pasar el ratón por encima */
+    transition: all 0.3s ease 0s; /* Transición de los elementos de la barra de navegación al pasar el ratón por encima */
 }
+
+/* Estilos de los enlaces de la barra de navegación */
 
 .navbar a {
-    text-decoration: none;
+    text-decoration: none; /* Quita la decoración de los enlaces */
     color: rgb(0, 0, 0); /* Color del texto de los enlaces */
-    font-weight: 600;
+    font-weight: 600; /* Grosor del texto de los enlaces */
 }
 
+/* Estilos del eslogan */
+
 .navbar .Slogan { /* Elemento del eslogan */
-    flex-grow: 1;
+    flex-grow: 1; /* Esto hace que el eslogan ocupe todo el espacio posible */
     margin-left: 5%; /* Margen izquierdo del eslogan */
 }
 
+/* Estilos del eslogan */
+
 .navbar .Slogan p { /* Texto del eslogan */
-    color: #000000;
-    font-size: 16px;
-    font-weight: 600;
+    color: #000000; /*Esto asigna el color del texto del eslogan */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: 600; /* Grosor del texto */
     font-family: 'poppins'; /* Fuente del eslogan */
 }
 
+/* Estilos del contenido de la página */
+
 .Contenido {
     background-color: rgb(255, 255, 255); /* Color de fondo del contenido */
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 40px;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    padding: 80px;
-    padding-top: 20px;
+    margin-top: 5%; /* Margen superior del contenido */
+    margin-left: 10%; /* Margen izquierdo del contenido */
+    margin-right: 10%; /* Margen derecho del contenido */
+    border-radius: 40px; /* Borde del contenido */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra del contenido */
+    padding: 80px; /* Relleno del contenido */
+    padding-top: 20px; /* Relleno superior del contenido */
 }
+
+/* Estilos de la imagen de la landing page */
 
 .Imagen_landing { /* Imagen de la landing page */
-    margin-top: 20px;
-    margin-left: 10%;
-    width: 80%;
-    height: 600px;
-    border-radius: 40px;
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    margin-top: 20px; /* Margen superior de la imagen de la landing page */
+    margin-left: 10%; /* Margen izquierdo de la imagen de la landing page */
+    width: 80%; /* Ancho de la imagen de la landing page */
+    height: 600px; /* Altura de la imagen de la landing page */
+    border-radius: 40px; /* Borde de la imagen de la landing page */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra de la imagen de la landing page */
 }
 
-.Imagen_landing:hover { /* Imagen de la landing page al pasar el ratón por encima */
-    opacity: 0.8;
-    transition: all 0.3s ease 0s;
+/* Imagen de la landing page al pasar el ratón por encima */
+.Imagen_landing:hover {
+    opacity: 0.8; /* Opacidad de la imagen de la landing page al pasar el ratón por encima */
+    transition: all 0.3s ease 0s; /* Transición de la imagen de la landing page al pasar el ratón por encima */
     
 }
 
-.Footer { /* Pie de página */
-    margin-top: 20px;
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    font-family: 'poppins'; /* Fuente del pie de página */
-    color: #ffffff;
-    background-color: #ffffff; /* Color de fondo del pie de página */
+/* Estilos del pie de página */
+
+.Footer {
+    margin-top: 20px; /* Margen superior del pie de página */
+    position: absolute; /* Posición del pie de página */
+    width: 100%; /* Ancho del pie de página */
+    font-family: var(--main-font); /* Fuente del pie de página */
+    color: #ffffff; /* Color del texto del pie de página */
+    background-color: var(--background-color); /* Color de fondo del pie de página */
   }
+
+.Footer p { /* Texto del pie de página */
+    text-align: center; /* Alineación del texto del pie de página */
+}
+
+/* Estilos de las tablas */
 
 table { /* Tabla */
-    vertical-align: top;
-    justify-content: center; 
-    margin: 20px;
-    text-align: center;
-  }
-  
-table p {
-    text-align: justify;
-    vertical-align: center;
-    justify-content: center;
-    border: 1px solid rgba(26, 26, 26, 0.61);
-    border-radius: 10px;
-    padding: 2%;
-    margin: 0 10px;
+    vertical-align: top; /* Alineación vertical de la tabla */
+    justify-content: center;  /* Centrar el contenido */
+    margin: 20px; /* Margen de la tabla */
+    text-align: center; /* Alineación del texto de la tabla */
 }
+  
+/* Estilos de los parrafos de las tablas */
+
+table p {
+    text-align: justify; /* Alineación del texto de las tablas */
+    vertical-align: center; /* Alineación vertical de las tablas */
+    justify-content: center; /* Centrar el contenido */
+    border: 1px solid rgba(26, 26, 26, 0.61); /* Borde de las tablas */
+    border-radius: 10px; /* Borde de las tablas */
+    padding: 2%; /* Relleno de las tablas */
+    margin: 0 10px; /* Margen de las tablas */
+}
+
+/* Estilos de las imágenes de las tablas */
 
 table img {
-    border-radius: 10%;
-    border: 2px solid rgba(26, 26, 26, 0.61);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    width: 400px;
-    height: 350px;
+    border-radius: 10%; /* Borde de las imágenes de las tablas */
+    border: 2px solid rgba(26, 26, 26, 0.61); /* Borde de las imágenes de las tablas */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra de las imágenes de las tablas */
+    width: 400px; /* Ancho de las imágenes de las tablas */
+    height: 350px; /* Altura de las imágenes de las tablas */
 }
+
+/* Imagen de la tabla al pasar el ratón por encima */
 
 table img:hover { /* Imagen de la tabla al pasar el ratón por encima */
-    transform: scale(1);
-    transition: 0.5s;
-    width: 450px;
-    height: 400px;
-    opacity: 0.5; 
+    transform: scale(1); /* Escala de la imagen de la tabla al pasar el ratón por encima */
+    transition: 0.5s; /* Transición de la imagen de la tabla al pasar el ratón por encima */
+    width: 450px; /* Ancho de la imagen de la tabla al pasar el ratón por encima */
+    height: 400px; /* Altura de la imagen de la tabla al pasar el ratón por encima */
+    opacity: 0.5;  /* Opacidad de la imagen de la tabla al pasar el ratón por encima */
 }
 
+/* Estilos del menú hamburguesa */
+
+.menu {
+    padding: 5%; /* Relleno del menú hamburguesa */
+}
+
+/* Estilos del icono del menú hamburguesa */
+.hamburguesa {
+    display: none; /* Ocultar el menú hamburguesa */
+}
+
+/* Estilos de la lista de hitos */
+
 .Hitos { /* Lista de hitos */
-    margin-top: 20px;
-    text-align: center;
-    list-style: none;
+    margin-top: 20px; /* Margen superior de la lista de hitos */
+    text-align: center; /* Alineación del texto de la lista de hitos */
+    list-style: none; /* Lista de elementos de la lista de hitos */
   }
 
+/* Estilos de los elementos de la lista de hitos */
 .Hitos li { /* Elementos de la lista de hitos */
-    margin-top: 5px;
+    margin-top: 5px;    /* Margen superior de los elementos de la lista de hitos */
+}
+
+.Hitos li:hover { /* Elementos de la lista de hitos al pasar el ratón por encima */
+    background: rgba( 255, 255, 255, 0.25 ); /* Color de fondo con transparencia */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.589); /* Sombra alrededor del elemento al pasar el ratón */
+    backdrop-filter: blur( 4px ); /* Efecto de desenfoque del fondo */
+    -webkit-backdrop-filter: blur( 4px ); /* Efecto de desenfoque del fondo para navegadores webkit */
+    border-radius: 10px; /* Radio de borde para suavizar las esquinas */
+    border: 1px solid rgba(26, 26, 26, 0.61); /* Borde alrededor del elemento */
+    padding: 5px; /* Espacio de relleno interno del elemento */
+    transition: all 0.3s ease 0s; /* Transición de 0.3 segundos para todos los estilos al pasar el ratón */
+}
+
+/* Estilos para pantallas de 0 a 800px */
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 2em; /* Tamaño de la fuente para el encabezado h1 */
+        padding-bottom: 5%; /* Espacio de relleno en la parte inferior del encabezado h1 */
+    }
+
+    td {
+        justify-content: center; /* Alinear el contenido de las celdas de la tabla al centro */
+        display:  block; /* Mostrar el contenido de las celdas de la tabla como bloque */
+        width: 100%; /* Ancho del contenido de las celdas de la tabla */
+        transition: all 0.7s ease; /* Transición suave de 0.7 segundos para todos los cambios de estilo */
+    }
+
+    .navbar {
+        display: grid; /* Mostrar el contenedor de navegación como una cuadrícula */
+        grid-template-columns: 1fr 1fr; /* Especificar el diseño de las columnas en el contenedor de navegación */
+        grid-template-rows: auto auto; /* Especificar el diseño de las filas en el contenedor de navegación */
+        width: 100%; /* Ancho del contenedor de navegación */
+        margin-left: 0%; /* Margen izquierdo del contenedor de navegación */
+        margin-top: 0%; /* Margen superior del contenedor de navegación */
+        border-radius: 0%; /* Radio de borde del contenedor de navegación */
+        top: 0%; /* Posición superior del contenedor de navegación */
+        align-items: center; /* Alinear los elementos dentro del contenedor de navegación en el centro vertical */
+        justify-items: end; /* Justificar los elementos dentro del contenedor de navegación hacia el final */
+    }
+
+    .navbar ul {
+        /* Colocar la lista de elementos en una columna nueva */
+        flex-direction: column; /* Dirección de la disposición de los elementos en la lista: columna */
+        align-items: flex-start; /* Alinear los elementos de la lista hacia el inicio */
+        grid-column: 1; /* Colocar la lista en la primera columna de la cuadrícula */
+    }
+    
+    .navbar a {
+        text-decoration: none; /* Eliminar el subrayado de los enlaces */
+        color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+        font-weight: 600; /* Grosor de la fuente para los enlaces */
+    }
+
+    .menu {
+        opacity: 0; /* Establecer la opacidad del menú en 0 para ocultarlo inicialmente */
+        transform: translateY(-1000px); /* Desplazar el menú hacia arriba 1000px */
+        background-color: var(--background-color); /* Color de fondo del menú */
+        position: absolute; /* Establecer la posición del menú como absoluta */
+        width: 100%; /* Ancho del menú */
+        top: 100%; /* Establecer la posición superior del menú al 100% */
+    }
+
+    .menu ul{
+        gap: 10px; /* Espacio entre elementos de la lista del menú */
+        text-align: center; /* Alinear el texto en el centro en la lista del menú */
+        align-items: center; /* Alinear los elementos de la lista del menú al centro */
+    }
+
+    .navbar .Slogan { /* Elemento del eslogan en el contenedor de navegación */
+        flex-grow: 1; /* Hacer que el eslogan ocupe todo el espacio disponible */
+        margin-left: 5%; /* Margen izquierdo del elemento de eslogan */
+    }
+    
+    .navbar .Slogan p { /* Texto del eslogan en el contenedor de navegación */
+        color: #000000; /* Color del texto del eslogan */
+        font-size: 16px; /* Tamaño de la fuente del texto del eslogan */
+        font-weight: 600; /* Grosor de la fuente del texto del eslogan */
+        font-family: 'poppins'; /* Familia de fuentes para el texto del eslogan */
+    }
+
+    .Imagen_landing { /* Estilo para la imagen de la página de destino */
+        height: 400px; /* Altura de la imagen de la página de destino */
+        margin-top: 20%; /* Margen superior de la imagen de la página de destino */
+    }
+
+    .Reloj {
+        width: 60%; /* Ancho del elemento de reloj */
+        margin-left: 20%; /* Margen izquierdo del elemento de reloj */
+        margin-top: -20%; /* Margen superior del elemento de reloj */
+    }
+
+    .Contenido {
+        margin-top: 20%; /* Margen superior para el contenido */
+    }
+
+    .hamburguesa {
+        --x-width: calc(var(--hamburgesa-height) * 1.414); /* Ancho de la hamburguesa */
+        display: flex; /* Mostrar la hamburguesa como flex */
+        flex-direction: column; /* Dirección de la disposición de los elementos en la hamburguesa: columna */
+        gap: var(--gap-hamburger); /* Espacio entre los elementos de la hamburguesa */
+        padding: 5%; /* Relleno alrededor de la hamburguesa */
+        width: max-content; /* Ancho máximo de la hamburguesa */
+        position: relative; /* Establecer la posición de la hamburguesa como relativa */
+        z-index: 999; /* Índice z para la hamburguesa */
+        cursor: pointer; /* Cambiar el cursor a un puntero al pasar sobre la hamburguesa */
+    }
+
+    .hamburguesa::before,
+    .hamburguesa::after,
+    .hamburguesa input {
+        content: ''; /* Agregar contenido a los pseudo elementos de la hamburguesa */
+        width: var(--bar-width); /* Ancho de la barra de la hamburguesa */
+        height: var(--bar-height); /* Altura de la barra de la hamburguesa */
+        background: var(--main-color); /* Color de fondo de la barra de la hamburguesa */
+        border-radius: 0.75rem; /* Radio de borde de la barra de la hamburguesa */
+        transition: opacity var(--transition), width var(--transition), transform var(--transition), translate var(--transition), rotate var(--transition), background-color var(--transition); /* Transiciones para los cambios de estilo */
+        transform-origin: left center; /* Origen de la transformación para los elementos de la hamburguesa */
+    }
+
+    .hamburguesa input {
+        appearance: none; /* Eliminar la apariencia predeterminada del input */
+        outline: none; /* Eliminar el contorno alrededor del input */
+        pointer-events: none; /* Deshabilitar los eventos del puntero en el input */
+    }
+
+    .hamburguesa input:checked {
+        opacity: 0; /* Establecer la opacidad del input en 0 cuando esté marcado */
+        width: 0; /* Establecer el ancho del input en 0 cuando esté marcado */
+    }
+
+    .hamburguesa:has(input:checked)::before {
+        rotate: 45deg; /* Rotar la barra de la hamburguesa 45 grados cuando el input esté marcado */
+        width: var(--x-width); /* Ancho de la barra de la hamburguesa cuando el input esté marcado */
+        translate: 0 calc(var(--bar-height) / -2); /* Traducir la barra de la hamburguesa */
+        background-color: #ffffff; /* Cambiar el color de fondo de la barra de la hamburguesa cuando el input esté marcado */
+    }
+
+    .hamburguesa:has(input:checked)::after {
+        rotate: -45deg; /* Rotar la barra de la hamburguesa -45 grados cuando el input esté marcado */
+        width: var(--x-width); /* Ancho de la barra de la hamburguesa cuando el input esté marcado */
+        translate: 0 calc(var(--bar-height) / 2); /* Traducir la barra de la hamburguesa */
+        background-color: #ffffff; /* Cambiar el color de fondo de la barra de la hamburguesa cuando el input esté marcado */
+    }
+
+    .hamburguesa:has(input:checked) + .menu {
+        opacity: 1; /* Establecer la opacidad del menú en 1 cuando el input esté marcado */
+        transition: opacity var(--transition), transform var(--transition); /* Transiciones para los cambios de estilo en el menú */
+        transform: translateY(0px); /* Volver a la posición original del menú cuando el input esté marcado */
+        pointer-events: auto; /* Habilitar los eventos del puntero en el menú cuando el input esté marcado */
+        transform: translate(0, 0); /* Volver a la posición original del menú cuando el input esté marcado */
+        border-top: #111111; /* Estilo de borde superior para el menú cuando el input esté marcado */
+    }
+
+}
+
+/* Estilos para pantallas de 800 a 1200px */
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    h1 {
+        font-size: 2em; /* Tamaño de la fuente del encabezado */
+        padding-bottom: 5%; /* Espaciado inferior para el encabezado */
+    }
+
+    td {
+        justify-content: center; /* Centrar el contenido en las celdas de la tabla */
+        display:  block; /* Mostrar los elementos en bloque */
+        width: 100%; /* Ancho del elemento */
+        transition: all 0.7s ease; /* Transición de todos los estilos con duración de 0.7 segundos y una función de facilidad */
+    }
+
+    .menu {
+        margin-right: 5%; /* Margen derecho del menú */
+    }
+
+    .menu ul {
+        gap: 2px; /* Espaciado entre elementos de la lista del menú */
+    }
+
+    .navbar {
+        display: grid; /* Mostrar el contenedor de navegación como cuadrícula */
+        grid-template-columns: 1fr 1fr; /* Columnas de la barra de navegación */
+        grid-template-rows: auto auto; /* Filas de la barra de navegación */
+        width: 100%; /* Ancho del contenedor de navegación */
+        margin-left: 0%; /* Margen izquierdo del contenedor de navegación */
+        margin-top: 0%; /* Margen superior del contenedor de navegación */
+        border-radius: 0%; /* Radio de borde del contenedor de navegación */
+        top: 0%; /* Posición superior del contenedor de navegación */
+        align-items: center; /* Alinear los elementos del contenedor de navegación al centro verticalmente */
+        justify-items: center; /* Alinear los elementos del contenedor de navegación al centro horizontalmente */
+        align-content: center; /* Alinear el contenido del contenedor de navegación al centro */
+        column-gap: 50px; /* Espacio entre columnas en la cuadrícula */
+    }
+
+    
+    .navbar a {
+        text-decoration: none; /* Eliminar el subrayado de los enlaces en el contenedor de navegación */
+        color: rgb(0, 0, 0); /* Color del texto de los enlaces en el contenedor de navegación */
+        font-weight: 600; /* Grosor de la fuente para los enlaces en el contenedor de navegación */
+    }
+
+    .navbar .Slogan { /* Elemento del eslogan en el contenedor de navegación */
+        flex-grow: 1; /* Hacer que el eslogan ocupe todo el espacio disponible */
+        margin-left: 5%; /* Margen izquierdo del elemento de eslogan en el contenedor de navegación */
+    }
+    
+    .navbar .Slogan p { /* Texto del eslogan en el contenedor de navegación */
+        color: #000000; /* Color del texto del eslogan en el contenedor de navegación */
+        font-size: 14px; /* Tamaño de la fuente del texto del eslogan en el contenedor de navegación */
+        font-weight: 600; /* Grosor de la fuente del texto del eslogan en el contenedor de navegación */
+        font-family: 'poppins'; /* Familia de fuentes para el texto del eslogan en el contenedor de navegación */
+    }
+
+    .Reloj {
+        width: 60%; /* Ancho del elemento de reloj */
+        margin-left: 20%; /* Margen izquierdo del elemento de reloj */
+        margin-top: -10%; /* Margen superior del elemento de reloj */
+    }
+
+    .Imagen_landing { /* Imagen de la página de destino */
+        height: 600px; /* Altura de la imagen de la página de destino */
+        margin-top: 10%; /* Margen superior de la imagen de la página de destino */
+    }
+
+    .Contenido {
+        margin-top: 20%; /* Margen superior del contenido */
+    }
+}
+
+/* Estilos para pantallas mayores a 1200px */
+@media screen and (min-width: 1200px) {
+    .Contenido {
+        margin-top: 10%; /* Margen superior del contenido para pantallas mayores a 1200px */
+    }
 }
