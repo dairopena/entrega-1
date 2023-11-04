@@ -163,6 +163,8 @@ td{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); /* Sombra del contenido */
     padding: 80px; /* Relleno del contenido */
     padding-top: 20px; /* Relleno superior del contenido */
+    overflow: scroll; /* Agregar barra de desplazamiento al contenido */
+
 }
 
 /* Estilos de la imagen de la landing page */
@@ -354,6 +356,7 @@ table img:hover { /* Imagen de la tabla al pasar el ratón por encima */
 
     .Contenido {
         margin-top: 20%; /* Margen superior para el contenido */
+        overflow: scroll; /* Agregar barra de desplazamiento al contenido */
     }
 
     .hamburguesa {
@@ -484,6 +487,7 @@ table img:hover { /* Imagen de la tabla al pasar el ratón por encima */
     }
 
     .Contenido {
+        overflow: scroll; /* Agregar barra de desplazamiento al contenido */
         margin-top: 20%; /* Margen superior del contenido */
     }
 }
@@ -492,5 +496,6 @@ table img:hover { /* Imagen de la tabla al pasar el ratón por encima */
 @media screen and (min-width: 1200px) {
     .Contenido {
         margin-top: 10%; /* Margen superior del contenido para pantallas mayores a 1200px */
+        overflow: scroll; /* Agregar barra de desplazamiento al contenido */
     }
 }
